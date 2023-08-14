@@ -32,6 +32,10 @@ function GetByLabelText() {
           <option value="vue">Vue</option>
         </select>
       </div>
+      <div>
+        <label htmlFor="topic-1">Topic</label>
+        <input type="text" id="topic-1" className="topic-class" />
+      </div>
       <button type="submit">Submit</button>
     </form>
   );
