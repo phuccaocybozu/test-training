@@ -46,10 +46,12 @@ describe("GetByRole", () => {
     expect(topic.value).toBe("react");
   });
 
-  // describe("GetByLabelText by  level option", () => {
-  //   render(<GetByLabelText />);
-  //   screen.getByRole("heading", {
-  //     level: 1,
-  //   });
-  // });
+  test("GetByLabelText by  level option", () => {
+    render(<GetByRole />);
+    const heading2 = screen.getByRole("heading", {
+      level: 2,
+    });
+
+    expect(heading2).toBeInTheDocument();
+  });
 });
