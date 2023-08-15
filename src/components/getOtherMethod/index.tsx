@@ -17,7 +17,7 @@ function OtherGetMethod() {
     await httpApi();
   };
   return (
-    <form>
+    <form title="Form">
       <div>
         <label htmlFor="username">Username </label>
         <input
