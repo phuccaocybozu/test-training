@@ -1,6 +1,6 @@
 // Sự khác nhau giữa getBy và queryBy
 
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import QueryBy from ".";
 
 // => Nếu như không có phần tử đó tồn tại, getBy sẽ throw ra lỗi. Còn nếu queryBy không có phần tử thì sẽ trả về null
