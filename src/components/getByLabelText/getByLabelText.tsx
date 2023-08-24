@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function GetByLabelText() {
   const [username, setUsername] = useState("");
-  const [topic, setTopic] = useState("react");
+  const [topic, setTopic] = useState("vue");
 
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
@@ -11,6 +11,7 @@ function GetByLabelText() {
   const handleTopicChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setTopic(event.target.value);
   };
+
   return (
     <form>
       <h1>Heading 1</h1>
@@ -36,6 +37,7 @@ function GetByLabelText() {
         <label htmlFor="topic-1">Topic</label>
         <input type="text" id="topic-1" className="topic-class" />
       </div>
+      <p>{topic}</p>
       <button type="submit">Submit</button>
     </form>
   );

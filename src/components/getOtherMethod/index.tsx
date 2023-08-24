@@ -3,14 +3,9 @@ import { httpApi } from "../../apis/http.api";
 
 function OtherGetMethod() {
   const [username, setUsername] = useState("");
-  const [topic, setTopic] = useState("react");
 
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
-  };
-
-  const handleTopicChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setTopic(event.target.value);
   };
 
   const handleSubmit = async () => {
@@ -30,7 +25,7 @@ function OtherGetMethod() {
       </div>
       <div>
         <label htmlFor="topic">Topic</label>
-        <select id="topic" value={topic} onChange={handleTopicChange}>
+        <select id="topic">
           <option value="react">React</option>
           <option value="angular">Angular</option>
           <option value="vue">Vue</option>

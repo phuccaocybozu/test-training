@@ -32,6 +32,7 @@ function GetByRole() {
           <option value="vue">Vue</option>
         </select>
       </div>
+      <p>{topic}</p>
       <button type="submit">Submit</button>
     </form>
   );

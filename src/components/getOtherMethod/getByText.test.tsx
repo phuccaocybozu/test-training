@@ -17,7 +17,7 @@ describe("Get By Text", () => {
       e.preventDefault();
     });
 
-    httpApi.mockResolvedValue();
+    (httpApi as jest.Mock).mockResolvedValue({});
     fireEvent.click(submitBtn);
 
     expect(apiSpy).toHaveBeenCalled();

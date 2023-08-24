@@ -19,13 +19,12 @@ describe("Get by display value", () => {
     expect(_input).toBeInTheDocument();
   });
 
-  test("Get display value of select", () => {
+  test("Get display value of select", async () => {
     render(<OtherGetMethod />);
     const select = screen.getByRole("combobox") as HTMLSelectElement;
-    const option = screen.getByRole("option", {
-      name: "React",
-    });
 
-    userEvent.selectOptions(select, option);
+    await userEvent.selectOptions(select, "vue");
+
+    expect(select).toHaveValue("vue");
   });
 });

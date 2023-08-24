@@ -38,12 +38,14 @@ describe("GetByRole", () => {
 
     //topic select
     const topic = screen.getByRole("combobox") as HTMLSelectElement;
-    const option1 = screen.getByRole("option", {
-      name: "React",
+
+    fireEvent.change(topic, {
+      target: {
+        value: "vue",
+      },
     });
 
-    userEvent.selectOptions(topic, option1);
-    expect(topic.value).toBe("react");
+    expect(screen.getByText("vue")).toBeInTheDocument();
   });
 
   test("GetByLabelText by  level option", () => {

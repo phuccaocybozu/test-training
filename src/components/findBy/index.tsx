@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function FindBy() {
   const [listSubject, setListSubject] = useState<string[]>([]);
@@ -9,9 +9,11 @@ function FindBy() {
   }, []);
 
   return listSubject.length > 0 ? (
-    listSubject.map((item, index) => {
-      return <div key={index}>{item}</div>;
-    })
+    <>
+      {listSubject.map((item, index) => {
+        return <div key={index}>{item}</div>;
+      })}
+    </>
   ) : (
     <button>Login</button>
   );

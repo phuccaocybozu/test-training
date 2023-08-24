@@ -26,13 +26,13 @@ describe("GetByLabelText by  name option", () => {
       selector: "select",
     }) as HTMLSelectElement;
 
-    const option1 = screen.getByRole("option", {
-      name: "React",
+    fireEvent.change(topic, {
+      target: {
+        value: "react",
+      },
     });
 
-    userEvent.selectOptions(topic, option1);
-    expect(topic.value).toBe("react");
-
+    expect(screen.getByText("react")).toBeInTheDocument();
     const topic1 = screen.getByLabelText("Topic", {
       selector: "input",
     });
