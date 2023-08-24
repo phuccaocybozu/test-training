@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "./util-custom-render";
 import user from "@testing-library/user-event";
 import App from "./App";
 import TestAppProvider from "./TestAppProvider";
@@ -7,23 +7,13 @@ import TestProvider from ".";
 describe("Test Provider", () => {
   //Khi có Provider thì phải đưa nó vào wrapper
   test("Have Wrapper", () => {
-    render(<App />, {
-      wrapper: TestAppProvider,
-    });
-    screen.getByText("abc");
-  });
-
-  test("Not Have Wrapper", async () => {
-    user.setup();
     render(<App />);
-    screen.getByText("Hello");
+    screen.getByText("abc");
   });
 
   test("Click button", async () => {
     user.setup();
-    render(<App />, {
-      wrapper: TestAppProvider,
-    });
+    render(<App />);
     screen.getByText("abc");
 
     const btn = screen.getByText("Click me");
