@@ -1,8 +1,8 @@
 import "./App.css";
-import TestProvider from "./components/TestProvider";
+import MockHttp from "./components/mockHttp";
 
 function App() {
-  return <TestProvider />;
+  return <MockHttp />;
 }
 
 export default App;

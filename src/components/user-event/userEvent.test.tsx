@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import UserEvent from ".";
 describe("Test user event", () => {
@@ -7,7 +7,9 @@ describe("Test user event", () => {
     render(<UserEvent />);
 
     const input = screen.getByRole("spinbutton");
-    await user.type(input, "10");
+    await act(async () => {
+      return await user.type(input, "10");
+    });
     expect(input).toHaveValue(10);
 
     const btnSet = screen.getByText("Set");
