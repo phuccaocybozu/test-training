@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot case 1 1`] = `
+<div>
+  <div>
+    <h2>
+      Title
+    </h2>
+    <p>
+      This is content of Snapshot component 1
+    </p>
+  </div>
+</div>
+`;
+
+exports[`snapshot case 2 1`] = `
+<div>
+  <div>
+    <h2>
+      Title
+    </h2>
+    <p>
+      This is content of Snapshot component 2
+    </p>
+  </div>
+</div>
+`;
